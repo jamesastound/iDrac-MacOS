@@ -7,7 +7,7 @@ A Guide to Accessing iDRAC5 / iDRAC6 on MacOS
 * macOS Catalina `v10.15.6` (live and [Parallels VM](https://www.parallels.com/products/desktop/pro/));
 * macOS Big Sur `v11.0 Public Betas 1 & 2`
 * iDRAC6 Enterprise installed in a Dell PowerEdge R510 w/RAC Firmware version `2.90 (Build 04)` 
-* iDRAC5 instaelled in a Dell PowerEdge 2950 Mk. II w/RAC Firmware version `1.65 (12.08.16)`
+* iDRAC5 installed in a Dell PowerEdge 2950 Mk. II w/RAC Firmware version `1.65 (12.08.16)`
 
 # Edit java.secirty
 * The iDRAC jar files are signed with old versions of Java, which are no longer available. More modern Java versions have blocked old protocols (MD5 and SSLv3) in their configuration files. It is necessary to edit or replace the existing `java.security` configuration file to re-enable these features.
@@ -30,13 +30,13 @@ A Guide to Accessing iDRAC5 / iDRAC6 on MacOS
 * On iDRAC5, click `Connect` and on iDRAC6 click `Launch Virtual Console`
 * In Safari, this will download a file `vkvm.jnlp` on IDRAC5 or `viewer.jnlp` on iDRAC6.
 * Click the `.jnlp` file to launch the virtual console.
-* macOS will likely force you to open System Preferences > Security & Privacy and click `Open Anyway` on the Genral tab.
+* macOS will likely force you to open System Preferences > Security & Privacy and click `Open Anyway` on the General tab.
 * macOS will then warn it cannot verify the developer of the <filename>. Click `Open`
 * Java will then warn "The certificate is not valid...". Click `Continue`
 * Java will also ask "Do you want to run this application?" Click `Run`
 * Finally, the iDRAC Console should appear.
 
-# Troublshooting Connection Problems
+# Troubleshooting Connection Problems
 * It can often take a minute or two before the console shows and image. During that time, you may see No Signal. You may see No Signal sporadically if your connection is poor. You can try hitting a key like Enter to wake up the display. If your system is set to turn off the monitor after a period of time, it will revert to No Signal.
 * If you get an `Out of Range` error, the remote resolution of your monitor is too high. Ideally your OS should boot to 1024x768.
   * I prefer setting screen resolution in [Grub](https://askubuntu.com/questions/54067/how-do-i-safely-change-grub2-screen-resolution).

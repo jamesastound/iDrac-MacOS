@@ -1,13 +1,13 @@
 # iDRAC-MacOS
-A Guide to Accessing iiDRAC5 / iiDRAC6 on MacOS
+A Guide to Accessing iDRAC5 / iDRAC6 on MacOS
 
 # I have tested this method with...
 * [Java](https://www.java.com/en/download/mac_download.jsp) -  `jre-8u261-macosx-x64.dmg`
 * macOS Mojave `10.14.6`
 * macOS Catalina `v10.15.6` (live and [Parallels VM](https://www.parallels.com/products/desktop/pro/));
 * macOS Big Sur `v11.0 Public Betas 1 & 2`
-* iDRAC6 Enterprise installed in Dell PowerEdge R510 w/RAC Firmware version `2.90 (Build 04)` 
-* iDRAC5 instaelled in Dell PowerEdge 2950 Mk. II w/RAC Firmware version `1.65 (12.08.16)`
+* iDRAC6 Enterprise installed in a Dell PowerEdge R510 w/RAC Firmware version `2.90 (Build 04)` 
+* iDRAC5 instaelled in a Dell PowerEdge 2950 Mk. II w/RAC Firmware version `1.65 (12.08.16)`
 
 # Edit java.secirty
 * The iDRAC jar files are signed with old versions of Java, which are no longer available. More modern Java versions have blocked old protocols (MD5 and SSLv3) in their configuration files. It is necessary to edit or replace the existing `java.security` configuration file to re-enable these features.
@@ -41,3 +41,4 @@ A Guide to Accessing iiDRAC5 / iiDRAC6 on MacOS
 * If you get an `Out of Range` error, the remote resolution of your monitor is too high. Ideally your OS should boot to 1024x768.
   * I prefer setting screen resolution in [Grub](https://askubuntu.com/questions/54067/how-do-i-safely-change-grub2-screen-resolution).
 * If you never make it to the Console, it is possible macOS or Java changed something since I wrote this. Try going to the Java Control Panel (System Settings > Java), click the Advanced Tab and choose `Show console` under the `Java Console` option. Click Apply.
+* Excellent Discussion (primarily focused on iDRAC6) can be found on [xbb](https://gist.github.com/xbb)/[README](https://gist.github.com/xbb/4fd651c2493ad9284dbcb827dc8886d6) gist [here](https://gist.github.com/xbb/4fd651c2493ad9284dbcb827dc8886d6).
